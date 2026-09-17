@@ -1,0 +1,14 @@
+[package]
+name = "wordprocessingml"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "WordprocessingML subset parse/serialize for document.xml"
+
+[dependencies]
+document-model = { workspace = true }
+thiserror = { workspace = true }
+quick-xml = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = "1"

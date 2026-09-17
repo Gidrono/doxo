@@ -1,0 +1,13 @@
+[package]
+name = "ooxml-package"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "OPC/ZIP package read/write with part-preserving round-trip"
+
+[dependencies]
+thiserror = { workspace = true }
+zip = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3"

@@ -1,0 +1,79 @@
+[package]
+name = "mac-ui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "AppKit / TextKit bridge for word-rs"
+
+[dependencies]
+document-model = { workspace = true }
+layout-bridge = { workspace = true }
+persistence = { workspace = true }
+editor-core = { workspace = true }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = { workspace = true }
+objc2-foundation = { workspace = true, features = [
+    "NSAttributedString",
+    "NSString",
+    "NSObject",
+    "NSValue",
+    "NSGeometry",
+    "NSArray",
+    "NSDictionary",
+    "NSURL",
+    "NSRange",
+    "NSData",
+    "NSNotification",
+    "NSThread",
+    "NSEnumerator",
+    "NSError",
+    "NSObjCRuntime",
+] }
+objc2-app-kit = { workspace = true, features = [
+    "NSApplication",
+    "NSWindow",
+    "NSView",
+    "NSTextView",
+    "NSText",
+    "NSScrollView",
+    "NSFont",
+    "NSColor",
+    "NSMenu",
+    "NSMenuItem",
+    "NSButton",
+    "NSButtonCell",
+    "NSControl",
+    "NSTextField",
+    "NSStackView",
+    "NSLayoutConstraint",
+    "NSResponder",
+    "NSRunningApplication",
+    "NSGraphics",
+    "NSAttributedString",
+    "NSParagraphStyle",
+    "NSFontManager",
+    "NSFontDescriptor",
+    "NSOpenPanel",
+    "NSSavePanel",
+    "NSAlert",
+    "NSScreen",
+    "NSTextStorage",
+    "NSLayoutManager",
+    "NSTextContainer",
+    "AppKitDefines",
+    "NSClipView",
+    "NSCell",
+    "NSPasteboard",
+    "NSEvent",
+    "NSImage",
+    "NSBox",
+    "NSUserInterfaceValidation",
+    "NSUserInterfaceLayout",
+    "NSAnimation",
+    "NSDragging",
+    "NSPopUpButton",
+    "NSTextAttachment",
+    "NSImage",
+] }
+block2 = { workspace = true }

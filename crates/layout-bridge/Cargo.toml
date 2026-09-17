@@ -1,0 +1,9 @@
+[package]
+name = "layout-bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Bridge between document model and TextKit attributed content"
+
+[dependencies]
+document-model = { workspace = true }

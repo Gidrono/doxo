@@ -1,0 +1,16 @@
+[package]
+name = "persistence"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Open/save orchestration for DOCX documents"
+
+[dependencies]
+document-model = { workspace = true }
+ooxml-package = { workspace = true }
+wordprocessingml = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3"
+test-fixtures = { workspace = true }

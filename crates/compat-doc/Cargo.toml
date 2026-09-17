@@ -1,0 +1,9 @@
+[package]
+name = "compat-doc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Legacy .doc conversion bridge (LibreOffice stub for Milestone 0)"
+
+[dependencies]
+thiserror = { workspace = true }

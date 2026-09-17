@@ -1,0 +1,19 @@
+[package]
+name = "app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "word-rs macOS application entrypoint"
+default-run = "word-rs"
+
+[[bin]]
+name = "word-rs"
+path = "src/main.rs"
+
+[dependencies]
+mac-ui = { workspace = true }
+persistence = { workspace = true }
+document-model = { workspace = true }
+layout-bridge = { workspace = true }
+editor-core = { workspace = true }
+compat-doc = { workspace = true }

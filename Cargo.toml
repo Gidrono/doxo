@@ -1,0 +1,45 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/app",
+    "crates/mac-ui",
+    "crates/editor-core",
+    "crates/document-model",
+    "crates/ooxml-package",
+    "crates/wordprocessingml",
+    "crates/layout-bridge",
+    "crates/compat-doc",
+    "crates/persistence",
+    "crates/test-fixtures",
+]
+default-members = ["crates/app"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Gidi Hanoch"]
+repository = "https://github.com/local/word-rs"
+
+[workspace.dependencies]
+document-model = { path = "crates/document-model" }
+ooxml-package = { path = "crates/ooxml-package" }
+wordprocessingml = { path = "crates/wordprocessingml" }
+layout-bridge = { path = "crates/layout-bridge" }
+editor-core = { path = "crates/editor-core" }
+mac-ui = { path = "crates/mac-ui" }
+persistence = { path = "crates/persistence" }
+compat-doc = { path = "crates/compat-doc" }
+test-fixtures = { path = "crates/test-fixtures" }
+
+thiserror = "2"
+quick-xml = "0.37"
+zip = { version = "2.2", default-features = false, features = ["deflate"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+serde = { version = "1", features = ["derive"] }
+
+# macOS UI (Darwin only)
+objc2 = "0.6"
+objc2-foundation = "0.3"
+objc2-app-kit = "0.3"
+block2 = "0.6"

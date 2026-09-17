@@ -1,0 +1,10 @@
+[package]
+name = "editor-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Semantic editing commands, session, and undo model"
+
+[dependencies]
+document-model = { workspace = true }
+thiserror = { workspace = true }
